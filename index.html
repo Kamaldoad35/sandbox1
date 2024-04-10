@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var students = new Array("Mark", "Tobi", "Mace", "Carl", "Heth");
+        Array.prototype.displayItems = function(){
+            for(i=0; i < this.length; i++){
+              document.write(this[i] + "<br>");
+            }
+        }
+        document.write("Students Array<br>");
+        students.displayItems();
+        document.write("<br> The number of items in students array :" + students.lenght + "<br>")
+
+        students.sort();
+        students.displayItems();
+         
+        document.write("<br>Reverse<br>")
+        students.reverse();
+        students.displayItems();
+
+        document.write("<br>Remove the Last Item<br>");
+        students.pop();
+        students.displayItems();
+
+        students.push("<br>New Name");
+        students.displayItems();
+
+        const colors=["blue", "black", "white", "green"]
+        colors[5]="purple";
+        const iterator= colors.keys();
+        for(const key of iterator){
+            console.log(`${key}: ${colors[key]}`);
+        } 
+
+        const newColors = colors.toReversed();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
